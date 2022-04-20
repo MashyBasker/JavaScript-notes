@@ -200,5 +200,77 @@ Since a local variable cannot be called at the global space.
 
 If a function does not have a return value, then the return type of the function is undefined. 
 
+We can even keep the returned value into a variable by assigning the output of the function to it.
+
+```js
+function addTwo(val) {
+    val += 2
+    return val
+}
+let a = 9
+const sum = addTwo(a)
+```
+
+*Boolean Datatypes*
+
+Boolean is another datatype that returns `true` or `false` value.
+
+```js
+function boolean() {
+    return true;
+}
+```
+
+**Conditional Statements**
+
+We can use conditional `if` anf `else` statements for checking if a condition is true or false and execute some statements accordingly.
+
+```js
+let myCondition = true
+if (myCondtion) {
+    console.log('This statement is true')
+}
+console.log('This statement is false')
+```
+
+*Comparison Operators*
+
+There two ways we can compare two variables `==` anf `===`. With the `==` operator, we can check if two variables are equal according to their value. But `===` checks if their value and data type are also same.
+
+For example, 2 == "2" is `true` but 2 === "2" is `false`.
+
+The `===` is also known as the **strict equality** operator.
+
+Similarly we can use the inequality operator `!=` for checking if two variables aren't equal.
+And also we can use the strict inequality operator `!==` for checking if two variables are strictly unequal.
+
+```
+For example,
+3 != 3 //false
+4 != 3 //true
+5 !== "5" //true
+8 !== 8 //false
+```
+In addition to the equality operator, we can use the greater than(`>`) and the less than(`<`) operator for checking if a value is greater/less than other or not. There are also the greater than or equal to(`>=`) and the less than or equal to(`<=`) operators for checking if the value is greater than or equal to some value or less than or equal to.
+
+We can also use the logical AND(`&&`) operator for checking multiple conditions within a single statement.
+
+The logical OR(`||`) operator returns `true` if either of the operator is true else returns false.
+
+```js
+if (a == 10 || a == 5) {
+    return "Yes"
+}
+return "No"
+//returns true of a = 10 or a = 5
+```
+**ELSE STATEMENT**
+
+
+
+
+
+
+
 
 
