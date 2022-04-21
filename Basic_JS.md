@@ -342,12 +342,48 @@ const dog = {
     "name": "Johnathan",
     "color": "Turquoise",
     "breed": "Labrador"
-}
+};
+```
+*Accessing Object Properties*
+
+We can access the values of the properties of an object using the dot(`.`) and the bracket notation(`[]`).
+
+```js
+const newObj = {
+    "val1" : "prop1",
+    "val2" : "prop2",
+    "val3" : "prop3" 
+};
+
+const a1 = newObj.val1;
+const a3 = newObj.val3;
 ```
 
+Also we can access the values using the bracket notation like that of an array.
 
+```js
+const valObj = {
+    "a1" : 1,
+    "a2" : 2,
+    "a3" : 3
+};
 
+const val1 = valObj["a1"]
+const val2 = valObj["a2"]
+```
+We can also store the values of the property names in a variable and access the property values using this variable. This is helpful for when we want to iterate through all the values in an object.
 
+```js
+const dog = {
+    "Labrador" : "Bro",
+    "Pitbull" : "Sis",
+    "Bulldog" : "Dad"
+};
+
+const dog1 = "Labrador"
+const first = dog[dog1]
+console.log(firsr)
+```
 
 
 
