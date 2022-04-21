@@ -266,6 +266,87 @@ return "No"
 ```
 **ELSE STATEMENT**
 
+`else` statements are used when we want to execute some statements when a condition is false.
+
+```js
+if (a == 10) {
+    return "Deca";
+}
+else {
+    return "Not Deca";
+}
+```
+When there are mutliple conditions that need to be checked, we use the `else if` statements.
+
+```js
+if (x >= 100) {
+    k = "Billionaire";
+}
+else if (x >= 50 && x < 100) {
+    k = "Millionaire";
+}
+else if (x >= 10 && x < 50) {
+    k = "Middle Class";
+}
+else {
+    k = "Poor";
+}
+```
+
+The `Else-If` statements are executed from the top, and hence the statements should be written accordingly.
+
+**SWITCH CASE**
+
+Switch case statement are used for executing statements based on a choice input by the user.
+
+```js
+switch(ch) {
+    case 1:
+        console.log("Hello boi")
+        break;
+    case 2:
+        console.log("Yeaah boi")
+        break;
+    case 3:
+        console.log("WTH boi")
+        break;
+    default:
+        console.log("Invalid choice!")
+        break;
+}
+```
+
+*Returning boolean values*
+
+Functions can return `true` or `false` values according to the condition.
+
+```js
+function isCheck(a , b) {
+    if (a === b) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+```
+
+When the `return` statement is reached in a function, the function stops executing.
+
+**JavaScript Objects**
+
+Objects are used for storing data. But instead of indexes, these data are stored along with the properties. 
+
+```js
+const dog = {
+    "name": "Johnathan",
+    "color": "Turquoise",
+    "breed": "Labrador"
+}
+```
+
+
+
 
 
 
