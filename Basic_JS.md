@@ -385,7 +385,109 @@ const first = dog[dog1]
 console.log(firsr)
 ```
 
+We can change the value of any property of an object by updating it's value like how we update array values.
 
+```js
+const myCat = {
+    "name" : "Snow",
+    "age" : 4,
+    "Color" : "white",
+    "Gender" : "male"
+};
+
+myCat.name = "White"
+myCat["age"] = 5
+```
+We can add new properties to an object by the following format.
+
+`<object_name>.<new_property_name> = <new_property_value>`
+
+We can delete a property from an object by using the `delete` keyword infront of the `object.property` 
+
+```js
+const myCow = {
+    "name" : "Komi",
+    "Color" : "White",
+    "Sound" : "Moo"
+};
+
+delete myCow.Color
+```
+Sometimes we might have to check if a property exists or not in an object. For this we use the method `.hasOwnProperty()` and returns `true` if it exists and `false` if not.
+
+```js
+const newObj = {
+    "first" : "one",
+    "second" : "two",
+    "fourth" : "four"
+};
+
+newObj.hasOwnProperty("fifth") //returns false
+newObj.hasOwnProperty("second") //returns true
+```
+*COMPLEX DATA STRUCTURES*
+
+We can create an array of objects. This type of data is known as JSON(JavaScript Object Notation) and is used as a format for interchanging data.
+
+```js
+const val = [
+    {
+        "name" : "Maharshi",
+        "age" : 18 
+    },
+    {
+        "name" : "Jackson",
+        "age" : 23
+    }
+];
+```
+
+The values of these objects can be accessed using the dot function.
+
+When there are nested objects, we can access them by chaining together the dot notation.
+
+```js
+const obj = {
+    "cat" : {
+        "properties" : {
+            "color" : "white",
+            "fur" : "fluffy",
+            "whiskers" : "long"
+        },
+        "biology" : {
+            "class" : "mammal",
+            "type" : "Felis"
+        }
+    }
+};
+
+const catColor = obj.cat.properties.color;
+```
+
+Objects can also contain nested arrays which can be accessed by using the array bracket notation.
+
+```js
+const arr = [
+    {
+        "thing" : "car",
+        "names" : [
+            "Ferrari",
+            "Audi",
+            "Porsche" 
+        ]
+    },
+    {
+        "thing" : "food",
+        "names" : [
+            "waffle",
+            "chicken wings",
+            "soya sauce"
+        ]
+    }
+];
+
+const arrVal = arr[1].names.[2]
+```
 
 
 
