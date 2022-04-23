@@ -489,6 +489,92 @@ const arr = [
 const arrVal = arr[1].names.[2]
 ```
 
+### **Iteration**
+
+We can iterate or loop a piece of code using loops.
+
+*While Loop*
+
+A while loop executes a piece code until it reaches a specific condition.
+
+```js
+const val = [2 , 5 , 9 , 3 , 6 , 8 , 10]
+let i = 0;
+let count = 0;
+
+while(i < val.length) {
+    if (i % 2 == 0) {
+        count++;
+    }
+    i++;
+}
+console.log(count);
+```
+
+*For loops*
+
+For loop works similar to a while loop, with just a difference in its structure.
+
+```js
+const arra = [];
+
+for (let i = 1 ; i <= 5 ; i++) {
+    arra.push(i);
+}
+console.log(arra);
+```
+
+*Do while*
+
+The do-while loop executes the statement first and then checks the loop condition.
+
+```js
+const array = []
+
+let i = 0;
+
+do {
+    array.push(i + 1);
+    i++;
+}while (i < 5);
+```
+
+### RECURSION
+
+Recursion is the concept that a function can be defined in terms of itself.
+
+```js
+function multiply(arr , n) {
+    if (n == 0) {
+        return 1;
+    }
+    else {
+        return multiply(arr , n - 1) * arr[n - 1]; 
+    }
+}
+```
+
+The `Math.random()` function can return a value between 0(inclusive) and 1(exclusive).
+
+To get a random number under a number `n`. We can get it by doing `(Math.random() * n) + 1`.
+
+To generate random numbers within a range.
+`Math.floor(Math.random() * (max - min + 1)) + min`
+
+**parseInt()**
+
+The `parseInt()` function parses a string and returns a number. We can specify the radix i.e the base system.
+
+```js
+const str = "abcd"
+const val = parseInt(str , 2);
+console.log(val);
+```
+
+
+
+
+
 
 
 
