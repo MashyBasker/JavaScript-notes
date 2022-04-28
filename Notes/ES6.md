@@ -299,6 +299,154 @@ newCar.change = "Mercedez"
 console.log(newCar.change);
 ```
 
+**Javascript Modules and Scripts**
+
+ES6 introduced a new feature wherein we can share parts of codes with the `import` keyword. This can be done by using the `module` attribute inside the `script` tag.
+
+*Import*
+
+A code can then use this module by using the `import` anf `export` commands.
+
+Let's say we have a file called `math.js`containing many functions that perform mathematical operations. If we want import this file, we can use the mathematical functions inside it.
+
+The functions can only be used when we use the `export` keyword infront of the function name.
+
+```js
+export const add = (a , b) => a + b;
+```
+We can do this or even add the functions like this,
+`export{<file_name>}`
+
+```js
+//file name is maths.js
+const multiply = (x , y) => x * y;
+const add = (x , y) => x + y;
+const divide = (x / y) => x / y;
+const subtract = (x , y) => abs(x - y);
+
+export{add , subtract , multiply , divide};
+```
+
+*Importing*
+
+We can reuse pieces of code by using the `import` keyword. We can import a specific function from a file using the function name along with the `import` keyword or even import all of them using the `*` command.
+
+Let's use the same example with `math.js`
+```js
+import {multiply} from  './math.js';
+```
+Here the `import` command will find the `multiply` method from the file `math.js` and import just the `multiply` function. 
+
+For importing more than functions.
+```js
+import {multiply , subtract} from './math.js';
+```
+
+And like I said before, we can import all the functions using the `import * as` command.
+
+Using the same example of math functions.
+
+```js
+import * as math from './math.js'
+
+const sum = math.add(2 , 9);
+const product = math.multiply(4 , 0);
+
+console.log(`Sum is ${sum} and product is ${product});
+```
+
+*Export Default*
+
+It is used for when we want to import only a single function from a module. For importing this, we need not use the curly braces.
+
+```js
+//creating the math.js module
+export default add(a , b) {
+    return a + b;
+}
+
+export default division(a , b) {
+    return a / b;
+}
+```
+
+Importing only the add function from the `math.js` module.
+
+```js
+import add from './math.js'
+const sum = math.add(4 , 8);
+```
+
+*Javascript Promise*
+
+A JavaScript promise is used for doing something, usually asynchronously. A promise is a constructor function which takes two paramteres `resolve` and `reject`. 
+
+If the promise becomes successful, then the `resolve` parameter is resolved otherwise the `reject` parameter is returned. The Promise constructor takes a function as its parameter.
+
+```js
+const serverRequest = new Promise((resolve , reject) => {
+
+});
+```
+Also,
+
+```js
+const makeServerRequest = new Promise((resolve , reject) => {
+    let serverResponse;
+    if (serverResponse) {
+        resolve("The request was successful");
+    }
+    else {
+        reject("The request was reject");
+    }
+});
+```
+
+*Handling a promise*
+
+When the promise is fulfilled with the resolve, we can use the `then` keyword to perform some function given by the paramter passed to the callback function.
+
+```js
+const makeRequest = new Promise((resolve , reject) => {
+    let response = true;
+    if (response) {
+        resolve('The request was successful');
+    }
+    else {
+        reject('The requesr was rejected');
+    }
+});
+
+makeRequest.then(result => {
+
+});
+```
+
+If the request was rejected, then the `catch` method is used to send an error.
+
+```js
+const makeRequest = new ((resolve , reject) => {
+    let serverResponse = true;
+    if (serverResponse) {
+        resolve("The request was fulfilled.");
+    }
+    else {
+        reject("The request cannot be fulfilled");
+    }
+});
+
+makeRequest.then(result => {
+    console.log(result);
+});
+
+makeRequesr.catch(error => {
+    console.log(error);
+});
+```
+
+
+
+
 
 
 
