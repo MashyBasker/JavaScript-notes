@@ -251,6 +251,56 @@ const myobj = {
     }
 };
 ```
+**Constructor Function**
+
+A constructor function is a way of creating class functions for objects in javascript.
+
+```js
+//OLD
+var car = function(name) {
+    this.name = name;
+}
+
+var newCar = new car('Mercedez');
+```
+
+```js
+//ES6
+class Car {
+    constructor(name) {
+        this.name = name; 
+    }
+}
+const newCar = new Car("Mercedez");
+```
+
+If we need to inherit some properties, we use the `extends` keyword and the `super` keyword to inherit the properties of the parent class.
+
+**Getters and Setters in Javascript**
+
+The `get` and `set` commands are used for updating the value of a constructor object from outside the object. We use these keywords infront of the function name which updates the value.
+
+```js
+class Car {
+    constructor(name) {
+        this.name = name;
+    }
+    get change() {
+        return this.name;
+    }
+    set change(newName) {
+        this.name = newName;
+    }
+}
+
+const newCar = new Car("Toyota");
+console.log(newCar.change);
+newCar.change = "Mercedez"
+console.log(newCar.change);
+```
+
+
+
 
 
 
