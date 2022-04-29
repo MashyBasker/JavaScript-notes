@@ -444,6 +444,40 @@ makeRequesr.catch(error => {
 });
 ```
 
+*Array Reduce*
+
+It is a method which reduces the elements of an array into a single value.
+
+This method takes two parameters, a function and a starting value. The function takes an **accumulator** and a **CurrentOrder**.
+
+The **accumulator** returns the value which was the reduced to for that iteration and the **CurrentOrder** takes the value of the array for that specific iteration.
+
+```js
+//to find the sum of the array elements
+const array = [1 , 8 , 4 , 0];
+
+const sum = array.reduce((acc , curr) => {
+    acc + curr;
+} , 0);
+```
+*forEach() method in JavaScript*
+
+It is the same as iterating through all the elements of an array, except it is performed as a callback function.
+
+A callback function is one which is passed as parameter into another function.
+
+The first parameter of the method corresponds to the elements themselves and the second parameter is the index of those elements.
+
+```js
+const arr = [2 , 7 , 8 , 1 , 0];
+
+const arr.forEach((element) => {
+    console.log(element);
+});
+```
+
+
+
 
 
 
