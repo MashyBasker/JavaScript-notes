@@ -1,4 +1,6 @@
-const susan = "Susan";
-const jacob = "Jacob";
+const names = {
+     susan : "Susan",
+     jacob : "Jacob"
+}
 
-module.exports = {susan , jacob};
+module.exports = {names};
